@@ -11,4 +11,4 @@ Tasks Done:
 Tasks Left:
 
 4. Filter Feature.
-5. UI Fixes
+5. UI Enhancement
