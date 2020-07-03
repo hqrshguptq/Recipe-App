@@ -2,7 +2,7 @@ import React from "react";
 
 const RecipeItem = (props) => {
   const { name, image, ingredientLines, ratio1, ratio2 } = props;
-  if ({ ratio1 } * 100 > 15) {
+  if ({ ratio1 } > 15) {
     return (
       <div className="card py-2 text-center">
         <img src={image} className="img-fluid w-50 mx-auto rounded-circle" />

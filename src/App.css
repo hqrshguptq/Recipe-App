@@ -32,8 +32,8 @@
   padding-bottom: 0px;
 }
 .filters {
-  margin-left: 180px;
-  margin-right: 400px;
+  margin-left: 160px;
+  margin-right: 700px;
   margin-bottom: auto;
 }
 .container {
@@ -42,4 +42,15 @@
 }
 .filt {
   color: #007bff;
+}
+
+[data-theme="compact"]
+  .site-collapse-custom-collapse
+  .site-collapse-custom-panel,
+.site-collapse-custom-collapse .site-collapse-custom-panel {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: solid #007bff;
+  overflow: hidden;
 }

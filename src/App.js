@@ -7,7 +7,7 @@ import CheckBox from "./components/CheckBox";
 import Axios from "axios";
 
 function App() {
-  const [search, setSearch] = useState("mango");
+  const [search, setSearch] = useState("pudding");
   const [recipes, setRecipes] = useState([]);
   const [alert, setAlert] = useState("");
   const [Filters, setFilters] = useState({

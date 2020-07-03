@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Checkbox, Collapse } from "antd";
+import { CaretRightOutlined } from "@ant-design/icons";
 
 const { Panel } = Collapse;
 
@@ -55,8 +56,15 @@ function CheckBox(props) {
 
   return (
     <div>
-      <Collapse defaultActiveKey={["0"]}>
-        <Panel header="Labels" key="1">
+      <Collapse
+        bordered={false}
+        defaultActiveKey={["0"]}
+        expandIcon={({ isActive }) => (
+          <CaretRightOutlined rotate={isActive ? 90 : 0} />
+        )}
+        className="site-collapse-custom-collapse"
+      >
+        <Panel className="site-collapse-custom-panel" header="Labels" key="1">
           {renderCheckboxLists()}
         </Panel>
       </Collapse>
