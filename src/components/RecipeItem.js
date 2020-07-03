@@ -56,7 +56,7 @@ const RecipeItem = (props) => {
             <div class="flip-card-front">
               <img
                 src={image}
-                className="img-fluid w-50 mx-auto rounded-circle"
+                className="img-fluid w-50 mx-auto rounded-circle margin-top:15px "
               />
               <div className="card-body">
                 <h5>{name}</h5>

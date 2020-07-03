@@ -1,18 +1,17 @@
-This is a submission code for Powerplay recruitment. It is hosted on Netlify(link is in description).
-Also it is incomplete still and please evaluate it end of the day today if possible. I will complete it before midnight.
-It happened due to some misread email and I just started the project around 10 today.
+This is a submission code for Powerplay recruitment. It is hosted on Netlify(link is in the description).
 
-Tasks Done:
+Tasks Achieved:
 
 1. Header and Search Components
 2. APIs integrated.
-3. Pagination Built.
+3. Added Alert (if entered wrong/not entered).
+4. Recipe feature updated.
+5. Pagination Built.
+6. UI fixes.
 
 Tasks Left:
 
-4. Filter Feature.
-5. UI Enhancement
-
+6. Some fault in Filter Feature.
 
 To Run the app,
-Basically yarn start  will do the job.
+Basically yarn start will do the job.
