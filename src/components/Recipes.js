@@ -36,8 +36,7 @@ const Recipes = (props) => {
                 recipe.recipe.totalDaily.FAT.quantity +
                 recipe.recipe.totalDaily.CHOCDF.quantity)
             }
-
-            // ingredientLines={recipe.recipe.ingredientLines}
+            ingredientLines={recipe.recipe.ingredientLines}
           />
         ))}
       </div>
