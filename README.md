@@ -12,3 +12,7 @@ Tasks Left:
 
 4. Filter Feature.
 5. UI Enhancement
+
+
+To Run the app,
+Basically yarn start  will do the job.
