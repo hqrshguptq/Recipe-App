@@ -22,6 +22,20 @@ const Recipes = (props) => {
             key={recipe.recipe.label}
             name={recipe.recipe.label}
             image={recipe.recipe.image}
+            ratio1={
+              recipe.recipe.totalNutrients.PROCNT.quantity /
+              (recipe.recipe.totalNutrients.PROCNT.quantity +
+                recipe.recipe.totalNutrients.FAT.quantity +
+                recipe.recipe.totalNutrients.CHOCDF.quantity)
+            }
+            ratio2={
+              (recipe.recipe.totalNutrients.FAT.quantity +
+                recipe.recipe.totalNutrients.CHOCDF.quantity) /
+              (recipe.recipe.totalNutrients.PROCNT.quantity +
+                recipe.recipe.totalNutrients.FAT.quantity +
+                recipe.recipe.totalNutrients.CHOCDF.quantity)
+            }
+
             // ingredientLines={recipe.recipe.ingredientLines}
           />
         ))}

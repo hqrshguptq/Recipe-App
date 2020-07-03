@@ -10,8 +10,8 @@ function App() {
   const [search, setSearch] = useState("mango");
   const [recipes, setRecipes] = useState([]);
   const [alert, setAlert] = useState("");
-  const [Filter, setFilter] = useState({
-    label: [],
+  const [Filters, setFilters] = useState({
+    labels: [],
   });
   const APP_ID = "dfd9c3fe";
   const APP_KEY = "f9d1efbc2828ca287476f00ba7134958";
@@ -31,7 +31,6 @@ function App() {
 
       setRecipes(res.data.hits);
       setAlert("");
-      setSearch("");
     } else {
       setAlert("Please fill the form!");
     }
@@ -43,10 +42,21 @@ function App() {
 
   const onSearchClick = () => {
     getRecipes();
-    setSearch("");
   };
 
-  const handleFilters = (filters, category) => {};
+  const showFilteredResults = (filters) => {
+    getRecipes(filters);
+  };
+
+  const handleFilters = (filters, category) => {
+    console.log(filters);
+    const newFilters = { ...Filters };
+    newFilters[category] = filters;
+
+    showFilteredResults(newFilters);
+    setFilters(newFilters);
+  };
+
   return (
     <div className="App">
       <Header
@@ -59,7 +69,7 @@ function App() {
       {/* <div className="alertsize">
         <Alert />
       </div> */}
-      <div>
+      <div class="filters">
         <CheckBox
           handleFilters={(filters) => handleFilters(filters, "labels")}
         />

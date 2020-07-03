@@ -45,7 +45,7 @@ function CheckBox(props) {
         <Checkbox
           onChange={() => handleToggle(value._id)}
           type="checkbox"
-          checked
+          checked={Checked.indexOf(value._id) === -1 ? false : true}
         />
         &nbsp;&nbsp;
         <span>{value.name}</span>
@@ -56,7 +56,7 @@ function CheckBox(props) {
   return (
     <div>
       <Collapse defaultActiveKey={["0"]}>
-        <Panel header="labels" key="1">
+        <Panel header="Labels" key="1">
           {renderCheckboxLists()}
         </Panel>
       </Collapse>
