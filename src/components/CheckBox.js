@@ -3,7 +3,7 @@ import { Checkbox, Collapse } from "antd";
 
 const { Panel } = Collapse;
 
-const filters = [
+const labels = [
   {
     _id: 1,
     name: "High Protein",
@@ -14,7 +14,7 @@ const filters = [
   },
   {
     _id: 3,
-    name: "High Carb",
+    name: "High Carbs",
   },
   {
     _id: 4,
@@ -22,7 +22,7 @@ const filters = [
   },
 ];
 
-function Filters(props) {
+function CheckBox(props) {
   const [Checked, setChecked] = useState([]);
 
   const handleToggle = (value) => {
@@ -37,32 +37,31 @@ function Filters(props) {
 
     setChecked(newChecked);
     props.handleFilters(newChecked);
-    //update this checked information into Parent Component
   };
 
-  const renderFiltersLists = () =>
-    props.list &&
-    props.list.map((value, index) => (
+  const renderCheckboxLists = () =>
+    labels.map((value, index) => (
       <React.Fragment key={index}>
         <Checkbox
-          onChnage={() => handleToggle(value._id)}
+          onChange={() => handleToggle(value._id)}
           type="checkbox"
-          checked={Checked.indexOf(value._id) === -1 ? false : true}
+          checked
         />
-
+        &nbsp;&nbsp;
         <span>{value.name}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </React.Fragment>
     ));
 
   return (
     <div>
       <Collapse defaultActiveKey={["0"]}>
-        <Panel header key="1">
-          {renderFiltersLists()}}
+        <Panel header="labels" key="1">
+          {renderCheckboxLists()}
         </Panel>
       </Collapse>
     </div>
   );
 }
 
-export default Filters;
+export default CheckBox;

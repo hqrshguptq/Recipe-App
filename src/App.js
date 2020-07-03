@@ -3,14 +3,16 @@ import "./App.css";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import Alert from "./components/Alert";
-import Filters from "./components/Filters";
+import CheckBox from "./components/CheckBox";
 import Axios from "axios";
 
 function App() {
   const [search, setSearch] = useState("mango");
   const [recipes, setRecipes] = useState([]);
   const [alert, setAlert] = useState("");
-
+  const [Filter, setFilter] = useState({
+    label: [],
+  });
   const APP_ID = "dfd9c3fe";
   const APP_KEY = "f9d1efbc2828ca287476f00ba7134958";
 
@@ -44,8 +46,7 @@ function App() {
     setSearch("");
   };
 
-  const handleFilters = (filter, category) => {};
-
+  const handleFilters = (filters, category) => {};
   return (
     <div className="App">
       <Header
@@ -58,9 +59,11 @@ function App() {
       {/* <div className="alertsize">
         <Alert />
       </div> */}
-      <>
-        <Filters handleFilters={(filter) => handleFilters(filter, "label")} />
-      </>
+      <div>
+        <CheckBox
+          handleFilters={(filters) => handleFilters(filters, "labels")}
+        />
+      </div>
       <div className="container" key={Math.random()}>
         <Recipes recipes={recipes} />
       </div>
