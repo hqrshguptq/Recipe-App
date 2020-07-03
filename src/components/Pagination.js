@@ -27,7 +27,7 @@ const Pagination = ({ showPerPage, onPaginationChange, total }) => {
     }
   };
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center padding-top=40px">
       <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
